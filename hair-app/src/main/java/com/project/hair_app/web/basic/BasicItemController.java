@@ -53,6 +53,6 @@ public class BasicItemController{
         itemRepository.save(new Item("testA", 10000, 10));
         itemRepository.save(new Item("testB", 20000, 20));
     }
-
+dsadsadadsadad
 
 }
