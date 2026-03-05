@@ -28,7 +28,7 @@ public class BasicItemController{
     public String item(@PathVariable("itemId") Long itemId, Model model){
         Item item = itemRepository.findById(itemId);
         model.addAttribute("item", item);
-        return "basic/itemdsa";
+        return "basic/item";
     }
 
     @GetMapping("/add")
@@ -41,6 +41,7 @@ public class BasicItemController{
                       @RequestParam(value = "price") int price,
                       @RequestParam(value = "quantity") Integer quantity,
                       Model model){
+        Item item = new Item(itemName, price, quantity);
         Item item = new Item(itemName, price, quantity);
         itemRepository.save(item);
         model.addAttribute("item", item);
