@@ -42,8 +42,7 @@ public class BasicItemController{
                       @RequestParam(value = "quantity") Integer quantity,
                       Model model){
         Item item = new Item(itemName, price, quantity);
-        Item item1 = new Item(itemName, price, quantity);
-        itemRepository.save(item);
+        itemRepository.save(item); d
         model.addAttribute("item", item);
 
         return "basic/item";
