@@ -28,7 +28,7 @@ public class BasicItemController{
     public String item(@PathVariable("itemId") Long itemId, Model model){
         Item item = itemRepository.findById(itemId);
         model.addAttribute("item", item);
-        return "basic/item";
+        return "basic/itemdsa";
     }
 
     @GetMapping("/add")
@@ -53,6 +53,6 @@ public class BasicItemController{
         itemRepository.save(new Item("testA", 10000, 10));
         itemRepository.save(new Item("testB", 20000, 20));
     }
-dsadsadadsadad
+
 
 }
