@@ -42,7 +42,7 @@ public class BasicItemController{
                       @RequestParam(value = "quantity") Integer quantity,
                       Model model){
         Item item = new Item(itemName, price, quantity);
-        itemRepository.save(item); d
+        itemRepository.save(item);
         model.addAttribute("item", item);
 
         return "basic/item";
